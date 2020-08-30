@@ -1,0 +1,198 @@
+
+
+#skip {
+  z-index: 3;
+  position: relative;
+
+}
+
+#skip a {
+  position: absolute;
+  border: 1px solid #fff;
+  color: #fff;
+  text-align: center;
+  background: #333;
+  width: 140px;
+  line-height: 30px;
+  left: 0;
+  top: -35px;
+}
+
+#skip a:active,
+#skip a:focus{top: 0;}
+
+/**animation**/
+@keyframes roll {
+  0%{
+    transform: translatey(0);
+  }
+
+  33.33%{
+    transform: translatey(-25%);
+  }
+
+  66.66%{
+    transform: translatey(-50%);
+  }
+
+  100%{
+    transform: translatey(-75%);
+  }
+}
+
+@keyframes filter {
+
+  0% {
+    transform : translatey(0);
+  }
+
+  100% {
+    transform: translatey(-90%);
+  }
+
+}
+
+
+/**css reset**/
+
+
+
+body,h1,p,ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+h1{
+  font-size: 100%;
+  font-weight:normal;
+}
+
+a{
+  color: inherit; /**색상 상속받는다**/
+  text-decoration: none;
+}
+
+body {
+  background-color: #111;
+  color: #999;
+}
+
+.img {
+  position:
+
+}
+
+.tophead {
+  color: red;
+  font-family:'Rock Salt', cursive;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  margin-top: 10%;
+
+  padding-bottom: 12px;
+  height: 129px;
+  font-size: 100px;
+  z-index: 2;
+  line-height: 1.5;
+  display: inline-block;
+  overflow: hidden;
+}
+
+#road {
+  animation-name: filter;
+  animation-duration: 1.6s;
+  animation-fill-mode: both;
+  animation-direction: reverse;
+}
+
+/
+.roadd {
+  animation: animate 4s liner infinite;
+
+}
+
+
+@keyframes animate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+  100% {
+    filter: hue-rotate(360deg);
+  }
+
+}
+
+
+
+.img-por {
+  height: 160px;
+  background-image: url(images/zing.jpg) ;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  /**
+  padding-top: 56.25%;
+  **/
+  padding-top: 50%;
+  z-index: 1;
+  filter: brightness(80%);
+}
+
+.profile{
+  padding: 7%;
+
+}
+
+.profile-header,
+.profile-section {
+  padding-bottom: 7%;
+}
+
+/** css reset**/
+
+.name{
+  font-size: 50px; /**부모 폰트사이즈 **/
+  line-height: 1.5; /** 한 줄의 크기**/
+  font-style: italic;
+  font-family: 'Satisfy', cursive;
+
+  /**
+  font-family: 'Comfortaa', cursive;
+**/
+
+}
+
+.name-job {
+  display: inline-block;
+  color: white;
+  vertical-align: top; /** 베이스라인을 위로**/
+  height: 1.5em;         /** 30을 넘거간 친구는 자르자 (부모폰트)**/
+  overflow: hidden;
+  padding-right: 0.5em;
+}
+
+.name-job-list {
+  animation-name: roll;
+  animation-duration: 6s;
+  animation-iteration-count: infinite; /**반복**/
+  animation-direction: reverse;
+}
+
+.name-title {
+  font-size: 1.3em; /**부모 폰프사이즈의 n배 **/
+  color: red;
+  margin-bottom: 20px;
+  margin-left: -0.2em;
+
+}
+
+#introduce {
+  width: 70%;
+}
